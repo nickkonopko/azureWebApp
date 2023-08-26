@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: .net-app
-          path: /wwwroot
+          path: /wwwroot/index.html
 
   deploy:
     runs-on: ubuntu-latest
