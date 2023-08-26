@@ -32,8 +32,8 @@ jobs:
       - name: copy file
         uses: canastro/copy-file-action@master
         with:
-          source: "/wwwroot/*"
-          target: "/published/"
+          source: "wwwroot/index.html"
+          target: "published/"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
