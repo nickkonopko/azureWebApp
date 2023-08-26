@@ -29,6 +29,11 @@ jobs:
         #run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\"
         #run: msbuild /nologo /verbosity:m /p:_PackageTempDir="\published\"
 
+      - name: copy file
+        uses: canastro/copy-file-action@master
+        with:
+          source: "/wwwroot/*"
+          target: "/published/"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
